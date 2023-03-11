@@ -16,9 +16,9 @@
 		AED7BC1B29BC7AE700DCF749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED7BC1929BC7AE700DCF749 /* LaunchScreen.storyboard */; };
 		AED7BC2629BC7AE700DCF749 /* FightingSimulator2999Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7BC2529BC7AE700DCF749 /* FightingSimulator2999Tests.swift */; };
 		AED7BC3029BC7AE700DCF749 /* FightingSimulator2999UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7BC2F29BC7AE700DCF749 /* FightingSimulator2999UITests.swift */; };
-		AED7BC3229BC7AE700DCF749 /* FightingSimulator2999UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7BC3129BC7AE700DCF749 /* FightingSimulator2999UITestsLaunchTests.swift */; };
 		AED7BC4329BC7B5700DCF749 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7BC4229BC7B5700DCF749 /* ResultViewController.swift */; };
 		AED7BC4529BC7B6800DCF749 /* FightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7BC4429BC7B6800DCF749 /* FightService.swift */; };
+		AED7BC4729BC84F100DCF749 /* MockFightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7BC4629BC84F100DCF749 /* MockFightService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +52,9 @@
 		AED7BC2529BC7AE700DCF749 /* FightingSimulator2999Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightingSimulator2999Tests.swift; sourceTree = "<group>"; };
 		AED7BC2B29BC7AE700DCF749 /* FightingSimulator2999UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightingSimulator2999UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED7BC2F29BC7AE700DCF749 /* FightingSimulator2999UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightingSimulator2999UITests.swift; sourceTree = "<group>"; };
-		AED7BC3129BC7AE700DCF749 /* FightingSimulator2999UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightingSimulator2999UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AED7BC4229BC7B5700DCF749 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		AED7BC4429BC7B6800DCF749 /* FightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightService.swift; sourceTree = "<group>"; };
+		AED7BC4629BC84F100DCF749 /* MockFightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFightService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				AED7BC2529BC7AE700DCF749 /* FightingSimulator2999Tests.swift */,
+				AED7BC4629BC84F100DCF749 /* MockFightService.swift */,
 			);
 			path = FightingSimulator2999Tests;
 			sourceTree = "<group>";
@@ -130,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				AED7BC2F29BC7AE700DCF749 /* FightingSimulator2999UITests.swift */,
-				AED7BC3129BC7AE700DCF749 /* FightingSimulator2999UITestsLaunchTests.swift */,
 			);
 			path = FightingSimulator2999UITests;
 			sourceTree = "<group>";
@@ -296,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED7BC4729BC84F100DCF749 /* MockFightService.swift in Sources */,
 				AED7BC2629BC7AE700DCF749 /* FightingSimulator2999Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +305,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AED7BC3229BC7AE700DCF749 /* FightingSimulator2999UITestsLaunchTests.swift in Sources */,
 				AED7BC3029BC7AE700DCF749 /* FightingSimulator2999UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
