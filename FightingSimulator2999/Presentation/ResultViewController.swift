@@ -7,20 +7,21 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
-    enum Result {
-        case win
-        case lose
-    }
+enum GameResult {
+    case win
+    case lose
+}
 
-    var result: Result = .lose
+class ResultViewController: UIViewController {
+    var presenter: ResultPresenter!
+    var result: GameResult = .lose
 
     @IBOutlet
     private var resultLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+                
         switch result {
             case .win:
                 resultLabel.text = "You win!"
@@ -31,5 +32,6 @@ class ResultViewController: UIViewController {
 
     @IBAction
     private func restartTap() {
+        presenter.restartGame()
     }
 }

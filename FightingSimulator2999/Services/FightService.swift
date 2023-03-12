@@ -22,3 +22,38 @@ protocol FightService {
     /// Deals 7-15 damage. Enemy attacks back and reduces `myHealth` by 10.
     func magicAttack()
 }
+
+class RestFightService: FightService {
+    
+    static let shared: RestFightService = .init()
+
+    
+    private var _myHealth: CurrentValueSubject<Int, Never> = .init(0)
+    private var _enemyHealth: CurrentValueSubject<Int, Never> = .init(0)
+    
+    
+    var myHealth: AnyPublisher<Int, Never> {
+        return _myHealth.eraseToAnyPublisher()
+    }
+    var enemyHealth: AnyPublisher<Int, Never> {
+        return _enemyHealth.eraseToAnyPublisher()
+    }
+    
+    
+    func startFight() {
+        _myHealth.value = 100
+        _enemyHealth.value = 100
+    }
+    
+    func basicAttack() {
+        _enemyHealth.value -= 9
+        _enemyHealth.value > 0 ? _myHealth.value -= 10 : nil
+    }
+    
+    func magicAttack() {
+        _enemyHealth.value -= Int.random(in: 7...15)
+        _enemyHealth.value > 0 ? _myHealth.value -= 10 : nil
+    }
+    
+    
+}

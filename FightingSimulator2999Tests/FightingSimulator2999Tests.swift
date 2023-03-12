@@ -9,6 +9,19 @@ import XCTest
 @testable import FightingSimulator2999
 
 final class FightingSimulator2999Tests: XCTestCase {
-    func testExample() throws {
+    
+    override func setUp() {
+        fightService = MockFightService()
+        fightView = MockFightView()
+        presenter = FightPresenter(view: fightView, fightService: fightService)
+        }
+
+        var fightService: MockFightService!
+        var fightView: MockFightView!
+        var presenter: FightPresenter!
+    
+    func testHPChanged() throws {
+        presenter.startGame()
+        XCTAssertTrue(fightService.startFightCalled)
     }
 }

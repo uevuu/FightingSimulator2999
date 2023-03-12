@@ -1,8 +1,14 @@
-//
-//  ResultPresenter.swift
-//  FightingSimulator2999
-//
-//  Created by nikita on 11.03.2023.
-//
+import UIKit
 
-import Foundation
+class ResultPresenter {
+    
+    init(view: ResultViewController) {
+        self.view = view
+    }
+    
+    private weak var view: ResultViewController?
+    
+    func restartGame() {
+        ResultCoordinator.shared.restar()
+    }
+}

@@ -6,7 +6,17 @@
 //
 
 import UIKit
-class FightViewController: UIViewController {
+
+protocol FightView: AnyObject {
+
+    func basicAttackTap()
+    func magicAttackTap()
+}
+
+class FightViewController: UIViewController, FightView {
+    
+    var presenter: FightPresenter!
+    
     @IBOutlet
     private var myHealthView: UIProgressView!
 
@@ -15,17 +25,26 @@ class FightViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        presenter.startGame()
         myHealthView.progress = 1
         enemyHealthView.progress = 1
     }
 
     @IBAction
-    private func basicAttackTap() {
+    internal func basicAttackTap() {
+        presenter.basicAttackTapped { [self] myNewHealth, enemyNewHealth in
+            myHealthView.progress = myNewHealth
+            enemyHealthView.progress = enemyNewHealth
+        }
     }
 
     @IBAction
-    private func magicAttackTap() {
+    internal func magicAttackTap() {
+        presenter.magicAttackTaped { [self] myNewHealth, enemyNewHealth in
+            myHealthView.progress = myNewHealth
+            enemyHealthView.progress = enemyNewHealth
+        }
     }
 }
 

@@ -9,13 +9,15 @@ class AppCoordinator {
     
     func start() {
         let controller: FightViewController = storyboard.instantiateViewController(identifier: "FightViewController")
-        let presenter = FightPresenter(view: controller)
+        let presenter = FightPresenter(view: controller, fightService: RestFightService())
         controller.presenter = presenter
         window?.rootViewController = controller
     }
     
-    func showGameResult() {
-        
+    func showGameResult(status: GameResult) {
+        let resultCoordinator = ResultCoordinator()
+        window?.rootViewController = resultCoordinator.start(status: status)
+
     }
     
     

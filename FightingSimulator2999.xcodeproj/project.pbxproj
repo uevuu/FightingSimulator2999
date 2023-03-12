@@ -19,6 +19,11 @@
 		AED7BC4329BC7B5700DCF749 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7BC4229BC7B5700DCF749 /* ResultViewController.swift */; };
 		AED7BC4529BC7B6800DCF749 /* FightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7BC4429BC7B6800DCF749 /* FightService.swift */; };
 		AED7BC4729BC84F100DCF749 /* MockFightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7BC4629BC84F100DCF749 /* MockFightService.swift */; };
+		EA88430029BC9C7F007210B6 /* FightPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8842FF29BC9C7F007210B6 /* FightPresenter.swift */; };
+		EA88430329BCA59D007210B6 /* ResultCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA88430229BCA59D007210B6 /* ResultCoordinator.swift */; };
+		EA88430529BCA6A8007210B6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA88430429BCA6A8007210B6 /* AppCoordinator.swift */; };
+		EA88430729BCB096007210B6 /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA88430629BCB096007210B6 /* ResultPresenter.swift */; };
+		EA88430929BCBAF4007210B6 /* MockFightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA88430829BCBAF4007210B6 /* MockFightView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		AED7BC4229BC7B5700DCF749 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		AED7BC4429BC7B6800DCF749 /* FightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightService.swift; sourceTree = "<group>"; };
 		AED7BC4629BC84F100DCF749 /* MockFightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFightService.swift; sourceTree = "<group>"; };
+		EA8842FF29BC9C7F007210B6 /* FightPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPresenter.swift; sourceTree = "<group>"; };
+		EA88430229BCA59D007210B6 /* ResultCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCoordinator.swift; sourceTree = "<group>"; };
+		EA88430429BCA6A8007210B6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		EA88430629BCB096007210B6 /* ResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
+		EA88430829BCBAF4007210B6 /* MockFightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFightView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,8 @@
 		AED7BC0A29BC7AE600DCF749 /* FightingSimulator2999 */ = {
 			isa = PBXGroup;
 			children = (
+				EA88430129BCA57B007210B6 /* Coordinators */,
+				EA8842FE29BC9C6D007210B6 /* Presenters */,
 				AED7BC3F29BC7B0000DCF749 /* Presentation */,
 				AED7BC3E29BC7AF700DCF749 /* Services */,
 				AED7BC0B29BC7AE600DCF749 /* AppDelegate.swift */,
@@ -123,6 +135,7 @@
 			children = (
 				AED7BC2529BC7AE700DCF749 /* FightingSimulator2999Tests.swift */,
 				AED7BC4629BC84F100DCF749 /* MockFightService.swift */,
+				EA88430829BCBAF4007210B6 /* MockFightView.swift */,
 			);
 			path = FightingSimulator2999Tests;
 			sourceTree = "<group>";
@@ -150,6 +163,24 @@
 				AED7BC4229BC7B5700DCF749 /* ResultViewController.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EA8842FE29BC9C6D007210B6 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				EA8842FF29BC9C7F007210B6 /* FightPresenter.swift */,
+				EA88430629BCB096007210B6 /* ResultPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		EA88430129BCA57B007210B6 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				EA88430229BCA59D007210B6 /* ResultCoordinator.swift */,
+				EA88430429BCA6A8007210B6 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,9 +315,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AED7BC4329BC7B5700DCF749 /* ResultViewController.swift in Sources */,
+				EA88430729BCB096007210B6 /* ResultPresenter.swift in Sources */,
+				EA88430029BC9C7F007210B6 /* FightPresenter.swift in Sources */,
 				AED7BC1029BC7AE600DCF749 /* FightViewController.swift in Sources */,
 				AED7BC4529BC7B6800DCF749 /* FightService.swift in Sources */,
+				EA88430329BCA59D007210B6 /* ResultCoordinator.swift in Sources */,
 				AED7BC0C29BC7AE600DCF749 /* AppDelegate.swift in Sources */,
+				EA88430529BCA6A8007210B6 /* AppCoordinator.swift in Sources */,
 				AED7BC0E29BC7AE600DCF749 /* SceneDelegate.swift in Sources */,
 				AED7BC1629BC7AE600DCF749 /* FightingSimulator2999.xcdatamodeld in Sources */,
 			);
@@ -296,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA88430929BCBAF4007210B6 /* MockFightView.swift in Sources */,
 				AED7BC4729BC84F100DCF749 /* MockFightService.swift in Sources */,
 				AED7BC2629BC7AE700DCF749 /* FightingSimulator2999Tests.swift in Sources */,
 			);
@@ -472,6 +508,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,6 +536,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -520,7 +558,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.azigangaraev.FightingSimulator2999Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -539,7 +577,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.azigangaraev.FightingSimulator2999Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -557,6 +595,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.azigangaraev.FightingSimulator2999UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -574,6 +613,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.azigangaraev.FightingSimulator2999UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

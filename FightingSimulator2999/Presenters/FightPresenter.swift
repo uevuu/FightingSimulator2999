@@ -3,30 +3,44 @@ import Combine
 
 class FightPresenter {
     
-    init(view: FightViewController) {
+    init(view: FightView, fightService: FightService) {
         self.view = view
-        self.fightService = RestFightService.shared
+        self.fightService = fightService
     }
     
-    private weak var view: FightViewController?
+    private weak var view: FightView?
     var fightService: FightService
     
     func startGame() {
+        print("game starting")
         fightService.startFight()
     }
     
     func basicAttackTapped(completion: @escaping(Float, Float) -> (Void)) {
         fightService.basicAttack()
-        let subscription = Publishers.Zip(fightService.myHealth, fightService.enemyHealth).sink { myHeath, enemyHeath in
+        _ = Publishers.Zip(fightService.myHealth, fightService.enemyHealth).sink { myHeath, enemyHeath in
             completion(Float(myHeath)/100, Float(enemyHeath)/100)
+            if myHeath <= 0 || enemyHeath <= 0 {
+                if myHeath <= 0 {
+                    AppCoordinator.shared.showGameResult(status: .lose)
+                } else {
+                    AppCoordinator.shared.showGameResult(status: .win)
+                }
+            }
         }
     }
     
     func magicAttackTaped(completion: @escaping(Float, Float) -> (Void)) {
         fightService.magicAttack()
-        let subscription = Publishers.Zip(fightService.myHealth, fightService.enemyHealth).sink { myHeath, enemyHeath in
+        _ = Publishers.Zip(fightService.myHealth, fightService.enemyHealth).sink { myHeath, enemyHeath in
             completion(Float(myHeath)/100, Float(enemyHeath)/100)
-            myHeath < 0 ? ap
+            if myHeath <= 0 || enemyHeath <= 0 {
+                if myHeath <= 0 {
+                    AppCoordinator.shared.showGameResult(status: .lose)
+                } else {
+                    AppCoordinator.shared.showGameResult(status: .win)
+                }
+            }
         }
     }
 }
